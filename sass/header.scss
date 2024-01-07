@@ -1,0 +1,127 @@
+@import './settings.scss';
+
+header {
+  height: 100dvh;
+  background-image: url('../images//background.png');
+  background-position: center;
+  object-fit: contain;
+  background-size: contain;
+
+  .container {
+
+    .header-wrapper {
+
+      nav {
+        background-color: $color-one;
+        width: 100dvw;
+        height: 10dvh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        .nav-wrapper {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+
+          div {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            a {
+              display: flex;
+              flex-direction: row;
+              justify-content: center;
+              align-items: center;
+
+              i {
+                font-size: 2.5dvw;
+                font-weight: bold;
+                font-style: normal;
+                color: $color-two;
+                text-transform: uppercase;
+              }
+
+              img {
+                height: 9.5dvh;
+                width: 9.5dvh;
+              }
+            }
+
+            &:last-of-type {
+              width: 20dvw;
+
+              a {
+                text-decoration: none;
+
+                i {
+                  color: $color-three
+                }
+              }
+            }
+          }
+        }
+      }
+
+      article {
+        height: 90dvh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+
+        div {
+          width: 35dvh;
+          height: 35dvh;
+          background-color: $color-two;
+          border-radius: $base-size * 3;
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          h3 {
+            top: 0;
+            color: $color-three;
+            text-align: center;
+            position: absolute;
+            text-transform: uppercase;
+            text-shadow:
+              -0.2rem -0.2rem 1rem $color-three,
+              0.2rem 0.2rem 1rem $color-three,
+              0 0 2rem $color-three,
+              0 0 4rem $color-three,
+              0 0 6rem $color-three,
+              0 0 8rem $color-three,
+              0 0 10rem $color-three;
+
+            &::-moz-selection {
+              background-color: $color-three;
+              color: $color-three;
+            }
+
+            &::selection {
+              background-color: $color-three;
+              color: $color-three;
+            }
+
+            &:focus {
+              outline: none;
+            }
+          }
+
+          img {
+            width: 25dvh;
+            height: 25dvh;
+          }
+        }
+      }
+    }
+  }
+}
