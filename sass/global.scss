@@ -15,6 +15,11 @@ body {
   font-size: 16px;
   line-height: 1.7;
   font-family: $font-athena;
+  background-image: url('../images/background.png');
+  background-position: center;
+  object-fit: contain;
+  background-size: contain;
+  background-attachment: fixed;
 }
 
 html {

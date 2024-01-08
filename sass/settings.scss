@@ -5,15 +5,48 @@
 /* Main colors */
 $color-one: #ffffff;
 $color-two: #000000;
-$color-three: #e100ff;
+$color-three: #FF0099;
+$color-four: #7DDCFA;
+$color-five: #FF66C4;
+
+/* Fonts */
+$font-one: 'Big Shoulders Display', sans-serif;
+$font-two: 'Montserrat', sans-serif;
+$font-three: 'Sacramento', cursive;
 
 /* Sizes */
 $base-size: 8px;
 $base-width: 780px;
 
-/* Other */
-$transition: all 1s;
+$media-border: 700px;
 
+/* Other */
+$transition-time: .5s;
 
 /* Fonts */
 $font-athena: 'Arial';
+
+/* Text neon glow */
+$neon-glow-three: -0.2rem -0.2rem 1rem $color-three,
+                  0.2rem 0.2rem 1rem $color-three,
+                  0 0 2rem $color-three,
+                  0 0 4rem $color-three,
+                  0 0 6rem $color-three,
+                  0 0 8rem $color-three,
+                  0 0 10rem $color-three;
+
+$neon-glow-four: -0.2rem -0.2rem 1rem $color-four,
+                  0.2rem 0.2rem 1rem $color-four,
+                  0 0 2rem $color-four,
+                  0 0 4rem $color-four,
+                  0 0 6rem $color-four,
+                  0 0 8rem $color-four,
+                  0 0 10rem $color-four;
+
+$neon-glow-five: -0.2rem -0.2rem 1rem $color-five,
+                  0.2rem 0.2rem 1rem $color-five,
+                  0 0 2rem $color-five,
+                  0 0 4rem $color-five,
+                  0 0 6rem $color-five,
+                  0 0 8rem $color-five,
+                  0 0 10rem $color-five;
