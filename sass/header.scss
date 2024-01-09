@@ -11,10 +11,17 @@ header {
         background-color: $color-one;
         width: 100dvw;
         height: 10dvh;
+        left: 0;
+        top: -15dvh;
+        position: fixed;
+        z-index: 30;
+        opacity: .25;
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        transition-property: top, opacity;
+        transition-duration: $transition-time;
 
         .nav-wrapper {
           width: 100%;
@@ -55,6 +62,11 @@ header {
             }
           }
         }
+      }
+
+      .nav-show {
+        top: 0;
+        opacity: 1;
       }
 
       article {

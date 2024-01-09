@@ -1,11 +1,8 @@
-import NavAndFooterHider from './NavAndFooterHider.js';
-import HamburgerTriggerChanger from './HamburgerTriggerChanger.js';
-
+import NavAndFooterVisibility from './NavAndFooterVisibility.js';
 
 export const app = {
   init: function() {
-    this.hamburgerTriggerChanger = new HamburgerTriggerChanger();
-    this.navAndFooterHider = new NavAndFooterHider();
+    this.navAndFooterVisivility = new NavAndFooterVisibility();
   }
 }
 

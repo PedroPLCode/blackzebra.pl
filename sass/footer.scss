@@ -2,7 +2,7 @@
 
 .footer {
   width: 100dvw;
-  bottom: -80px;
+  bottom: -120px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -21,13 +21,10 @@
     align-items: flex-end;
     z-index: 95;
 
-    @media (max-width: $media-border) {
-      width: 90dvw;
-    }
-
     .arrow-up {
 
       a {
+        text-decoration: none;
         margin-bottom: calc($base-size * 2);
         display: flex;
         flex-direction: column;
@@ -48,22 +45,11 @@
           transition-property: color;
           transition-duration: $transition-time;
         }
-
-        @media (min-width: $media-border) {
-
-          &:hover {
-            transform: scale(1.2);
-
-            i {
-              color: $color-two;
-            }
-          }
-        }
       }
     }
   }
 
-  &.footer__show {
+  &.footer-show {
     bottom: 0;
     opacity: 1;
   }
