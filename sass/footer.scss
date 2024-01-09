@@ -32,8 +32,6 @@
         align-items: center;
         width: calc($base-size * 7);
         height: calc($base-size * 7);
-        border-radius: 50%;
-        background-color: $color-one;
         z-index: 100;
         transition-property: transform;
         transition-duration: $transition-time;
@@ -42,8 +40,7 @@
           color: $color-three;
           font-size: calc($base-size * 6);
           font-weight: bold;
-          transition-property: color;
-          transition-duration: $transition-time;
+          transform: rotate(-45deg);
         }
       }
     }

@@ -1,10 +1,18 @@
-/* Variables */
-/* Main colors */
-/* Fonts */
-/* Sizes */
-/* Other */
-/* Fonts */
-/* Text neon glow */
+/*
+0 0 4rem $color-three,
+0 0 6rem $color-three,
+0 0 8rem $color-three,
+0 0 10rem $color-three; */
+/*
+0 0 4rem $color-four,
+0 0 6rem $color-four,
+0 0 8rem $color-four,
+0 0 10rem $color-four; */
+/*
+0 0 4rem $color-five,
+0 0 6rem $color-five,
+0 0 8rem $color-five,
+0 0 10rem $color-five; */
 .footer {
   width: 100dvw;
   bottom: -120px;
@@ -35,8 +43,6 @@
   align-items: center;
   width: 56px;
   height: 56px;
-  border-radius: 50%;
-  background-color: #ffffff;
   z-index: 100;
   transition-property: transform;
   transition-duration: 0.5s;
@@ -45,12 +51,11 @@
   color: #FF0099;
   font-size: 48px;
   font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.5s;
+  transform: rotate(-45deg);
 }
 .footer.footer-show {
   bottom: 0;
   opacity: 1;
 }
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Nhc3Mvc2V0dGluZ3Muc2NzcyIsIi4uL3Nhc3MvZm9vdGVyLnNjc3MiLCJmb290ZXIuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUVBLGNBQUE7QUFFQSxnQkFBQTtBQU9BLFVBQUE7QUFLQSxVQUFBO0FBTUEsVUFBQTtBQUdBLFVBQUE7QUFHQSxtQkFBQTtBQzFCQTtFQUNFLGFBQUE7RUFDQSxjQUFBO0VBQ0EsYUFBQTtFQUNBLG1CQUFBO0VBQ0EsdUJBQUE7RUFDQSxtQkFBQTtFQUNBLGFBQUE7RUFDQSxlQUFBO0VBQ0EsV0FBQTtFQUNBLG9DQUFBO0VBQ0EseUJEVWdCO0FFSmxCO0FESkU7RUFDRSxVQUFBO0VBQ0EsYUFBQTtFQUNBLG1CQUFBO0VBQ0EseUJBQUE7RUFDQSxxQkFBQTtFQUNBLFdBQUE7QUNNSjtBREZNO0VBQ0UscUJBQUE7RUFDQSxtQkFBQTtFQUNBLGFBQUE7RUFDQSxzQkFBQTtFQUNBLHVCQUFBO0VBQ0EsbUJBQUE7RUFDQSxXQUFBO0VBQ0EsWUFBQTtFQUNBLGtCQUFBO0VBQ0EseUJEOUJJO0VDK0JKLFlBQUE7RUFDQSw4QkFBQTtFQUNBLHlCRGZVO0FFbUJsQjtBREZRO0VBQ0UsY0RsQ0k7RUNtQ0osZUFBQTtFQUNBLGlCQUFBO0VBQ0EsMEJBQUE7RUFDQSx5QkR0QlE7QUUwQmxCO0FERUU7RUFDRSxTQUFBO0VBQ0EsVUFBQTtBQ0FKIiwiZmlsZSI6ImZvb3Rlci5jc3MifQ== */
+/*# sourceMappingURL=footer.css.map */

@@ -1,11 +1,18 @@
-/* Variables */
-/* Main colors */
-/* Fonts */
-/* Sizes */
-/* Other */
-/* Fonts */
-/* Text neon glow */
-/* Global */
+/*
+0 0 4rem $color-three,
+0 0 6rem $color-three,
+0 0 8rem $color-three,
+0 0 10rem $color-three; */
+/*
+0 0 4rem $color-four,
+0 0 6rem $color-four,
+0 0 8rem $color-four,
+0 0 10rem $color-four; */
+/*
+0 0 4rem $color-five,
+0 0 6rem $color-five,
+0 0 8rem $color-five,
+0 0 10rem $color-five; */
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -18,11 +25,9 @@ body {
   margin: 0;
   font-size: 16px;
   line-height: 1.7;
-  font-family: "Arial";
   background-image: url("../images/background.png");
   background-position: center;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   background-size: contain;
   background-attachment: fixed;
 }
@@ -44,4 +49,4 @@ section {
   padding: 96px 0;
 }
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Nhc3Mvc2V0dGluZ3Muc2NzcyIsIi4uL3Nhc3MvZ2xvYmFsLnNjc3MiLCJnbG9iYWwuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUVBLGNBQUE7QUFFQSxnQkFBQTtBQU9BLFVBQUE7QUFLQSxVQUFBO0FBTUEsVUFBQTtBQUdBLFVBQUE7QUFHQSxtQkFBQTtBQzFCQSxXQUFBO0FBRUE7RUFDRSxzQkFBQTtBQ0tGOztBREZBO0VBQ0UsdUJBQUE7QUNLRjs7QURGQTtFQUNFLFNBQUE7RUFDQSxlQUFBO0VBQ0EsZ0JBQUE7RUFDQSxvQkRVWTtFQ1RaLGlEQUFBO0VBQ0EsMkJBQUE7RUFDQSxzQkFBQTtLQUFBLG1CQUFBO0VBQ0Esd0JBQUE7RUFDQSw0QkFBQTtBQ0tGOztBREZBO0VBQ0UsdUJBQUE7QUNLRjs7QURGQTtFQUNFLGFBQUE7RUFDQSxnQkRaVztFQ2FYLGVBQUE7RUFDQSxZQUFBO0VBQ0EsdUJBQUE7RUFDQSxtQkFBQTtBQ0tGOztBREZBO0VBQ0UsZUFBQTtBQ0tGIiwiZmlsZSI6Imdsb2JhbC5jc3MifQ== */
+/*# sourceMappingURL=global.css.map */
