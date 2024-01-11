@@ -21,6 +21,11 @@
       justify-content: center;
       align-items: center;
 
+      @media (min-width: $media-border) {
+        height: 85dvh;
+        max-width: $base-width;
+      }
+
       div {
         width: 100%;
         display: flex;
@@ -31,7 +36,7 @@
         h3 {
           top: 0;
           color: $color-three;
-          font-size: 8dvw;
+          font-size: clamp($base-size, 6dvw, $base-size * 4);
           font-family: $font-one;
           text-align: center;
           position: absolute;
@@ -67,6 +72,11 @@
           justify-content: flex-start;
           align-items: flex-start;
 
+          @media (min-width: $media-border) {
+            width: 100%;
+            gap: calc($base-size * 2);
+          }
+
           a {
             text-decoration: none;
           }
@@ -79,6 +89,11 @@
             justify-content: center;
             align-items: center;
             gap: calc($base-size * 2);
+
+            @media (min-width: $media-border) {
+              width: 100%;
+              height: 10%;
+            }
 
             div {
               width: 75%;
@@ -98,6 +113,12 @@
                   font-weight: bold;
                   margin: 0;
                   padding: 0;
+
+                  @media (hover) {
+                    &:hover {
+                      animation: flicker 1.5s infinite;
+                    }
+                  }
                 }
               }
             }
@@ -126,9 +147,24 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  transition-duration: $transition-time;
+  transition-property: background-color;
 
   i {
     color: $color-two;
+    transition-duration: $transition-time;
+    transition-property: color, transform;
+  }
+
+  @media (hover) {
+    &:hover {
+      background-color: $color-three;
+
+      i {
+        color: $color-one;
+        transform: scale(1.3);
+      }
+    }
   }
 }
 

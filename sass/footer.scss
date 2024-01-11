@@ -33,14 +33,23 @@
         width: calc($base-size * 7);
         height: calc($base-size * 7);
         z-index: 100;
-        transition-property: transform;
-        transition-duration: $transition-time;
 
         i {
           color: $color-three;
           font-size: calc($base-size * 6);
           font-weight: bold;
           transform: rotate(-45deg);
+
+          @media (min-width: $media-border) {
+            font-size: calc($base-size * 8);
+          }
+
+          @media (hover) {
+            &:hover {
+              font-size: calc($base-size * 8);
+              animation: flicker 1.5s infinite;
+            }
+          }
         }
       }
     }

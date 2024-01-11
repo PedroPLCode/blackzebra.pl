@@ -1,4 +1,5 @@
 @import './settings.scss';
+@import './keyframes.scss';
 
 header {
   height: 100dvh;
@@ -23,12 +24,20 @@ header {
         transition-property: top, opacity;
         transition-duration: $transition-time;
 
+        @media (min-width: $media-border) {
+          height: 8dvh;
+        }
+
         .nav-wrapper {
           width: 100%;
           display: flex;
           flex-direction: row;
           justify-content: space-between;
           align-items: center;
+
+          @media (min-width: $media-border) {
+            justify-content: flex-start;
+          }
 
           div {
             display: flex;
@@ -53,6 +62,11 @@ header {
               img {
                 height: 7dvh;
                 width: 7dvh;
+
+                @media (min-width: $media-border) {
+                  height: 9dvh;
+                  width: 9dvh;
+                }
               }
             }
 
@@ -76,7 +90,13 @@ header {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 3dvh;
+        gap: 5dvh;
+
+        @media (min-width: $media-border) {
+          flex-direction: row;
+          height: 104dvh;
+          gap: calc((104dvh - 8dvh - 65dvh ) / 2);
+        }
 
         a {
           width: 43dvh;
@@ -89,10 +109,21 @@ header {
           justify-content: center;
           align-items: center;
 
+          @media (min-width: $media-border) {
+            width: 65dvh;
+            height: 65dvh;
+          }
+
+          @media (hover) {
+            &:hover h3 {
+              animation: flicker 1.5s infinite;
+            }
+          }
+
           h3 {
             top: 0;
             color: $color-three;
-            font-size: 8dvw;
+            font-size: clamp($base-size, 8dvw, $base-size * 4);
             font-family: $font-one;
             text-align: center;
             position: absolute;
@@ -117,6 +148,11 @@ header {
           img {
             width: 30dvh;
             height: 30dvh;
+
+            @media (min-width: $media-border) {
+              width: 45dvh;
+              height: 45dvh;
+            }
           }
         }
       }
@@ -126,8 +162,10 @@ header {
 
 
 .menu {
+  width: 75%;
   display: flex;
   flex-direction: row;
+  justify-content: flex-end;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -138,11 +176,12 @@ header {
   overflow: hidden;
 
   a {
-    color: $color-one;
+    color: $color-three;
     text-decoration: none;
+    font-family: $font-one;
+    font-size: calc($base-size * 2.5);
     font-weight: bold;
     text-transform: uppercase;
-    text-shadow: $neon-glow-three;
 
     &::-moz-selection {
       background-color: $color-three;
@@ -156,6 +195,12 @@ header {
 
     &:focus {
       outline: none;
+    }
+
+    @media (hover) {
+      &:hover {
+        animation: flicker 1.5s infinite;
+      }
     }
   }
 }
@@ -210,7 +255,7 @@ header {
   transform: rotate(-405deg);
 }
 
-@media (max-width: 700px) {
+@media (max-width: $media-border) {
 
   .menu-button-container {
     display: flex;
@@ -265,6 +310,11 @@ header {
     width: 100%;
     color: $color-one;
     background-color: $color-two;
+
+    a {
+      color: $color-one;
+      font-size: 8dvw;
+    }
   }
 
   .menu > li:not(:last-child) {

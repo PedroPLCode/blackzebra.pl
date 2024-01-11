@@ -44,14 +44,23 @@
   width: 56px;
   height: 56px;
   z-index: 100;
-  transition-property: transform;
-  transition-duration: 0.5s;
 }
 .footer .footer-wrapper .arrow-up a i {
   color: #FF0099;
   font-size: 48px;
   font-weight: bold;
   transform: rotate(-45deg);
+}
+@media (min-width: 700px) {
+  .footer .footer-wrapper .arrow-up a i {
+    font-size: 64px;
+  }
+}
+@media (hover) {
+  .footer .footer-wrapper .arrow-up a i:hover {
+    font-size: 64px;
+    animation: flicker 1.5s infinite;
+  }
 }
 .footer.footer-show {
   bottom: 0;
