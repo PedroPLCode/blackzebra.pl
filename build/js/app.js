@@ -1,6 +1,6 @@
 import NavAndFooterVisibility from './NavAndFooterVisibility.js';
 
-const app = {
+export const app = {
   init: function() {
     this.navAndFooterVisivility = new NavAndFooterVisibility();
   }

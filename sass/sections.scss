@@ -12,7 +12,7 @@
 
     div {
       width: 85dvw;
-      height: 85dvh;
+      height: 92dvh;
       background-color: $color-two;
       border-radius: $base-size * 3;
       position: relative;
@@ -24,7 +24,7 @@
       h3 {
         top: 0;
         color: $color-three;
-        font-size: 8dvw;
+        font-size: 6dvw;
         font-family: $font-one;
         text-align: center;
         position: absolute;
@@ -56,7 +56,7 @@
           text-transform: uppercase;
           font-family: $font-two;
           text-shadow: $neon-glow-four;
-          top: 32dvh;
+          top: 28dvh;
 
           &::-moz-selection {
             background-color: $color-three;
@@ -78,7 +78,7 @@
           font-size: 8dvw;
           font-family: $font-three;
           text-shadow: $neon-glow-five;
-          top: 34dvh;
+          top: 30dvh;
 
           &::-moz-selection {
             background-color: $color-four;
@@ -97,9 +97,9 @@
       }
 
       img {
-        width: 35dvh;
-        height: 35dvh;
-        margin-top: 5dvh;
+        width: 30dvh;
+        height: 30dvh;
+        margin-top: 4dvh;
       }
     }
   }

@@ -10,7 +10,7 @@ header {
       nav {
         background-color: $color-one;
         width: 100dvw;
-        height: 10dvh;
+        height: 6dvh;
         left: 0;
         top: -15dvh;
         position: fixed;
@@ -51,14 +51,15 @@ header {
               }
 
               img {
-                height: 9.5dvh;
-                width: 9.5dvh;
+                height: 7dvh;
+                width: 7dvh;
               }
             }
 
             h3 {
               color: $color-three;
               font-family: $font-two;
+              text-align: center;
             }
           }
         }
@@ -70,15 +71,16 @@ header {
       }
 
       article {
-        height: 90dvh;
+        height: 106dvh;
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
+        gap: 3dvh;
 
         a {
-          width: 35dvh;
-          height: 35dvh;
+          width: 43dvh;
+          height: 43dvh;
           background-color: $color-two;
           border-radius: $base-size * 3;
           position: relative;
@@ -113,8 +115,8 @@ header {
           }
 
           img {
-            width: 25dvh;
-            height: 25dvh;
+            width: 30dvh;
+            height: 30dvh;
           }
         }
       }
@@ -136,18 +138,11 @@ header {
   overflow: hidden;
 
   a {
-    color: $color-three;
+    color: $color-one;
     text-decoration: none;
     font-weight: bold;
     text-transform: uppercase;
-    text-shadow:
-      -0.2rem -0.2rem 1rem $color-three,
-      0.2rem 0.2rem 1rem $color-three,
-      0 0 2rem $color-three,
-      0 0 4rem $color-three,
-      0 0 6rem $color-three,
-      0 0 8rem $color-three,
-      0 0 10rem $color-three;
+    text-shadow: $neon-glow-three;
 
     &::-moz-selection {
       background-color: $color-three;
@@ -168,7 +163,7 @@ header {
 .menu-button-container {
   display: none;
   height: 100%;
-  width: 30px;
+  width: 7dvh;
   cursor: pointer;
   flex-direction: column;
   justify-content: center;
@@ -225,7 +220,7 @@ header {
   .menu {
     z-index: 7;
     position: absolute;
-    top: 10dvh;
+    top: 6dvh;
     margin-top: 10dvh;
     left: 0;
     display: flex;
@@ -247,9 +242,10 @@ header {
   }
 
   #menu-toggle:checked ~ .menu li {
-    height: 2.5em;
-    font-size: 4dvw;
-    padding: 1.5em;
+    height: 10dvh;
+    font-family: $font-one;
+    font-size: 8dvw;
+    padding: 1dvh;
     transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
 
     &:first-of-type {

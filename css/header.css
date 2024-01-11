@@ -19,7 +19,7 @@ header {
 header .container .header-wrapper nav {
   background-color: #ffffff;
   width: 100dvw;
-  height: 10dvh;
+  height: 6dvh;
   left: 0;
   top: -15dvh;
   position: fixed;
@@ -59,27 +59,29 @@ header .container .header-wrapper nav .nav-wrapper div a i {
   text-transform: uppercase;
 }
 header .container .header-wrapper nav .nav-wrapper div a img {
-  height: 9.5dvh;
-  width: 9.5dvh;
+  height: 7dvh;
+  width: 7dvh;
 }
 header .container .header-wrapper nav .nav-wrapper div h3 {
   color: #FF0099;
   font-family: "Montserrat", sans-serif;
+  text-align: center;
 }
 header .container .header-wrapper .nav-show {
   top: 0;
   opacity: 1;
 }
 header .container .header-wrapper article {
-  height: 90dvh;
+  height: 106dvh;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
+  gap: 3dvh;
 }
 header .container .header-wrapper article a {
-  width: 35dvh;
-  height: 35dvh;
+  width: 43dvh;
+  height: 43dvh;
   background-color: #000000;
   border-radius: 24px;
   position: relative;
@@ -110,8 +112,8 @@ header .container .header-wrapper article a h3:focus {
   outline: none;
 }
 header .container .header-wrapper article a img {
-  width: 25dvh;
-  height: 25dvh;
+  width: 30dvh;
+  height: 30dvh;
 }
 
 .menu {
@@ -127,11 +129,11 @@ header .container .header-wrapper article a img {
   overflow: hidden;
 }
 .menu > li a {
-  color: #FF0099;
+  color: #ffffff;
   text-decoration: none;
   font-weight: bold;
   text-transform: uppercase;
-  text-shadow: -0.2rem -0.2rem 1rem #FF0099, 0.2rem 0.2rem 1rem #FF0099, 0 0 2rem #FF0099, 0 0 4rem #FF0099, 0 0 6rem #FF0099, 0 0 8rem #FF0099, 0 0 10rem #FF0099;
+  text-shadow: -0.2rem -0.2rem 1rem #FF0099, 0.2rem 0.2rem 1rem #FF0099, 0 0 2rem #FF0099;
 }
 .menu > li a::-moz-selection {
   background-color: #FF0099;
@@ -148,7 +150,7 @@ header .container .header-wrapper article a img {
 .menu-button-container {
   display: none;
   height: 100%;
-  width: 30px;
+  width: 7dvh;
   cursor: pointer;
   flex-direction: column;
   justify-content: center;
@@ -203,7 +205,7 @@ header .container .header-wrapper article a img {
   .menu {
     z-index: 7;
     position: absolute;
-    top: 10dvh;
+    top: 6dvh;
     margin-top: 10dvh;
     left: 0;
     display: flex;
@@ -223,9 +225,10 @@ header .container .header-wrapper article a img {
     transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
   }
   #menu-toggle:checked ~ .menu li {
-    height: 2.5em;
-    font-size: 4dvw;
-    padding: 1.5em;
+    height: 10dvh;
+    font-family: "Big Shoulders Display", sans-serif;
+    font-size: 8dvw;
+    padding: 1dvh;
     transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
   }
   #menu-toggle:checked ~ .menu li:first-of-type {
