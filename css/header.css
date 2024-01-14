@@ -13,9 +13,32 @@
 0 0 6rem $color-five,
 0 0 8rem $color-five,
 0 0 10rem $color-five; */
+/*
+0 0 4rem $color-three,
+0 0 6rem $color-three,
+0 0 8rem $color-three,
+0 0 10rem $color-three; */
+/*
+0 0 4rem $color-four,
+0 0 6rem $color-four,
+0 0 8rem $color-four,
+0 0 10rem $color-four; */
+/*
+0 0 4rem $color-five,
+0 0 6rem $color-five,
+0 0 8rem $color-five,
+0 0 10rem $color-five; */
 @keyframes flicker {
   0%, 18%, 22%, 25%, 53%, 57%, 100% {
     text-shadow: 0 0 4px #FF0099, 0 0 11px #FF0099, 0 0 19px #FF0099, 0 0 40px #FF0099, 0 0 80px #FF0099;
+  }
+  20%, 24%, 55% {
+    text-shadow: none;
+  }
+}
+@keyframes flicker-light {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow: 0 0 4px #FF0099, 0 0 11px #FF0099;
   }
   20%, 24%, 55% {
     text-shadow: none;
@@ -40,7 +63,7 @@ header .container .header-wrapper nav {
   transition-property: top, opacity;
   transition-duration: 0.5s;
 }
-@media (min-width: 700px) {
+@media (min-width: 1024px) {
   header .container .header-wrapper nav {
     height: 8dvh;
   }
@@ -51,11 +74,6 @@ header .container .header-wrapper nav .nav-wrapper {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-}
-@media (min-width: 700px) {
-  header .container .header-wrapper nav .nav-wrapper {
-    justify-content: flex-start;
-  }
 }
 header .container .header-wrapper nav .nav-wrapper div {
   display: flex;
@@ -80,7 +98,7 @@ header .container .header-wrapper nav .nav-wrapper div a img {
   height: 7dvh;
   width: 7dvh;
 }
-@media (min-width: 700px) {
+@media (min-width: 1024px) {
   header .container .header-wrapper nav .nav-wrapper div a img {
     height: 9dvh;
     width: 9dvh;
@@ -103,7 +121,7 @@ header .container .header-wrapper article {
   align-items: center;
   gap: 5dvh;
 }
-@media (min-width: 700px) {
+@media (min-width: 1024px) {
   header .container .header-wrapper article {
     flex-direction: row;
     height: 104dvh;
@@ -121,7 +139,7 @@ header .container .header-wrapper article a {
   justify-content: center;
   align-items: center;
 }
-@media (min-width: 700px) {
+@media (min-width: 1024px) {
   header .container .header-wrapper article a {
     width: 65dvh;
     height: 65dvh;
@@ -157,7 +175,7 @@ header .container .header-wrapper article a img {
   width: 30dvh;
   height: 30dvh;
 }
-@media (min-width: 700px) {
+@media (min-width: 1024px) {
   header .container .header-wrapper article a img {
     width: 45dvh;
     height: 45dvh;
@@ -199,7 +217,7 @@ header .container .header-wrapper article a img {
 }
 @media (hover) {
   .menu > li a:hover {
-    animation: flicker 1.5s infinite;
+    animation: flicker-light 1s infinite;
   }
 }
 
@@ -253,7 +271,7 @@ header .container .header-wrapper article a img {
   transform: rotate(-405deg);
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1024px) {
   .menu-button-container {
     display: flex;
     padding-right: 16px;
@@ -291,7 +309,7 @@ header .container .header-wrapper article a img {
     height: calc((85dvh - 4em) / 2);
   }
   #menu-toggle:checked ~ .menu li:last-of-type {
-    height: calc((85dvh - 4em) / 2);
+    height: 100dvh;
   }
   .menu > li {
     display: flex;

@@ -51,7 +51,7 @@
   font-weight: bold;
   transform: rotate(-45deg);
 }
-@media (min-width: 700px) {
+@media (min-width: 1024px) {
   .footer .footer-wrapper .arrow-up a i {
     font-size: 64px;
   }

@@ -32,7 +32,7 @@
   justify-content: flex-start;
   align-items: center;
 }
-@media (min-width: 700px) {
+@media (min-width: 1024px) {
   .section-one .container div, .section-two .container div {
     height: 85dvh;
     max-width: 980px;
@@ -105,7 +105,7 @@
   height: 30dvh;
   margin-top: 4dvh;
 }
-@media (min-width: 700px) {
+@media (min-width: 1024px) {
   .section-one .container div img, .section-two .container div img {
     width: 30dvh;
     height: 30dvh;

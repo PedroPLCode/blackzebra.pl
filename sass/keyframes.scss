@@ -1,7 +1,7 @@
+@import './settings.scss';
+
 @keyframes flicker {
-
   0%, 18%, 22%, 25%, 53%, 57%, 100% {
-
       text-shadow:
       0 0 4px $color-three,
       0 0 11px $color-three,
@@ -11,7 +11,24 @@
       0 0 90px $color-three,
       0 0 100px $color-three,
       0 0 150px $color-three, */
+  }
 
+  20%, 24%, 55% {
+      text-shadow: none;
+  }
+}
+
+@keyframes flicker-light {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+      text-shadow:
+      0 0 4px $color-three,
+      0 0 11px $color-three, /*
+      0 0 19px $color-three,
+      0 0 40px $color-three,
+      0 0 80px $color-three,
+      0 0 90px $color-three,
+      0 0 100px $color-three,
+      0 0 150px $color-three, */
   }
 
   20%, 24%, 55% {

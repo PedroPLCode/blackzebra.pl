@@ -35,10 +35,6 @@ header {
           justify-content: space-between;
           align-items: center;
 
-          @media (min-width: $media-border) {
-            justify-content: flex-start;
-          }
-
           div {
             display: flex;
             flex-direction: row;
@@ -199,7 +195,7 @@ header {
 
     @media (hover) {
       &:hover {
-        animation: flicker 1.5s infinite;
+        animation: flicker-light 1s infinite;
       }
     }
   }
@@ -298,7 +294,7 @@ header {
     }
 
     &:last-of-type {
-      height: calc((85dvh - 2em * 2) / 2);
+      height: 100dvh;
     }
   }
 
@@ -320,5 +316,3 @@ header {
   .menu > li:not(:last-child) {
   }
 }
-
-
