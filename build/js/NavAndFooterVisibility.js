@@ -17,23 +17,19 @@ class NavAndFooterVisibility {
   }
 
   initActions = () => {
-    this.dom.hamburgerTrigger.addEventListener('click', () => {
-      this.handleHamburgerTriggerClick();
-    })
+    window.addEventListener('click', event => {
+      const hamburgerMenuLinks = document.querySelectorAll(selectors.hamburgerMenuLinks);
+      for (let singleMenuLink of hamburgerMenuLinks) {
+        if (event.target == singleMenuLink) {
+          this.handleCloseHamburgerMenu();
+        }
+    }
+    });
     window.addEventListener('scroll', event => {
       event.preventDefault();
       this.handleNavigationVisibility();
       this.handleFooterVisibility();
     });
-  }
-
-  handleHamburgerTriggerClick = () => {
-    const hamburgerMenuLinks = document.querySelectorAll(selectors.hamburgerMenuLinks);
-    for (let singleMenuLink of hamburgerMenuLinks) {
-      singleMenuLink.addEventListener('click', () => {
-        this.handleCloseHamburgerMenu();
-      })
-    }
   }
 
   handleCloseHamburgerMenu = () => {

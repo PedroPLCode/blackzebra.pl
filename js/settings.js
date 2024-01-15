@@ -9,3 +9,7 @@ export const classNames = {
   footerShow: 'footer-show',
   navShow: 'nav-show',
 }
+
+export const settings = {
+  delay: 250,
+}
