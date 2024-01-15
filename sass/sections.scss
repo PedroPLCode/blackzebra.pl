@@ -111,6 +111,12 @@
           height: 30dvh;
           margin-top: 8dvh;
         }
+
+        @media (orientation: landscape) {
+          width: 30dvh;
+          height: 30dvh;
+          margin-top: 14dvh;
+        }
       }
     }
   }

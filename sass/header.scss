@@ -28,6 +28,10 @@ header {
           height: 8dvh;
         }
 
+        @media (orientation: landscape) {
+          height: 10dvh;
+        }
+
         .nav-wrapper {
           width: 100%;
           display: flex;
@@ -63,6 +67,11 @@ header {
                   height: 9dvh;
                   width: 9dvh;
                 }
+
+                @media (orientation: landscape) {
+                  height: 11dvh;
+                  width: 11dvh;
+                }
               }
             }
 
@@ -94,6 +103,12 @@ header {
           gap: calc((104dvh - 8dvh - 65dvh ) / 2);
         }
 
+        @media (orientation: landscape) {
+          flex-direction: row;
+          height: 110dvh;
+          gap: calc((110dvh - 10dvh - 75dvh ) / 2);
+        }
+
         a {
           width: 43dvh;
           height: 43dvh;
@@ -108,6 +123,11 @@ header {
           @media (min-width: $media-border) {
             width: 65dvh;
             height: 65dvh;
+          }
+
+          @media (orientation: landscape) {
+            width: 75dvh;
+            height: 75dvh;
           }
 
           @media (hover) {
@@ -272,6 +292,10 @@ header {
     list-style-type: none;
     margin: 0;
     padding: 0;
+
+    @media (orientation: landscape) {
+      top: 10dvh;
+    }
   }
 
   #menu-toggle ~ .menu li {
@@ -289,8 +313,16 @@ header {
     padding: 1dvh;
     transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
 
+    @media (orientation: landscape) {
+      height: 16dvh;
+    }
+
     &:first-of-type {
       height: calc((85dvh - 2em * 2) / 2);
+
+      @media (orientation: landscape) {
+        height: calc((90dvh - 10dvh * 3 - 1dvh * 6) / 3);
+      }
     }
 
     &:last-of-type {
@@ -310,6 +342,10 @@ header {
     a {
       color: $color-one;
       font-size: 8dvw;
+
+      @media (orientation: landscape) {
+        font-size: 4dvw;
+      }
     }
   }
 
