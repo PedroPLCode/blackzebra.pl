@@ -91,6 +91,7 @@ header {
 
       article {
         height: 106dvh;
+        width: 100dvw;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -99,11 +100,13 @@ header {
 
         @media (min-width: $media-border) {
           flex-direction: row;
+          justify-content: space-between;
           height: 104dvh;
-          gap: calc((104dvh - 8dvh - 65dvh ) / 2);
+          width: 75dvw;
+          max-width: $base-width;
         }
 
-        @media (orientation: landscape) {
+        @media (max-width: $media-border) and (orientation: landscape) {
           flex-direction: row;
           height: 110dvh;
           gap: calc((110dvh - 10dvh - 75dvh ) / 2);
@@ -114,11 +117,11 @@ header {
           height: 43dvh;
           background-color: $color-two;
           border-radius: $base-size * 3;
-          position: relative;
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
+          text-decoration: none;
 
           @media (min-width: $media-border) {
             width: 65dvh;
@@ -137,12 +140,12 @@ header {
           }
 
           h3 {
+            z-index: 10;
             top: 0;
             color: $color-three;
             font-size: clamp($base-size, 8dvw, $base-size * 4);
             font-family: $font-one;
             text-align: center;
-            position: absolute;
             text-transform: uppercase;
             text-shadow: $neon-glow-three;
 
@@ -162,11 +165,9 @@ header {
           }
 
           img {
-            width: 30dvh;
             height: 30dvh;
 
             @media (min-width: $media-border) {
-              width: 45dvh;
               height: 45dvh;
             }
           }
@@ -175,7 +176,6 @@ header {
     }
   }
 }
-
 
 .menu {
   width: 75%;

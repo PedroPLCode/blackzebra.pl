@@ -1,9 +1,10 @@
-import { classNames, selectors } from './settings.js';
+import { classNames, selectors, settings } from './settings.js';
 
 class NavAndFooterVisibility {
   constructor() {
     this.previousScrollPosition = 0;
     this.currentScrollPosition = 0;
+    this.navCanBeVisible = true;
     this.getElements();
     this.initActions();
   }
@@ -21,15 +22,24 @@ class NavAndFooterVisibility {
       const hamburgerMenuLinks = document.querySelectorAll(selectors.hamburgerMenuLinks);
       for (let singleMenuLink of hamburgerMenuLinks) {
         if (event.target == singleMenuLink) {
+          this.navCanBeVisible = false;
           this.handleCloseHamburgerMenu();
         }
     }
     });
-    window.addEventListener('scroll', event => {
+    window.addEventListener('scroll', async event => {
       event.preventDefault();
       this.handleNavigationVisibility();
       this.handleFooterVisibility();
+      await this.sleep(settings.delay);
+      this.navCanBeVisible ? null : this.navigationHide();
+      await this.sleep(settings.delay);
+      this.navCanBeVisible = true;
     });
+  }
+
+  sleep = ms => {
+    return new Promise(resolve => setTimeout(resolve, ms));
   }
 
   handleCloseHamburgerMenu = () => {
@@ -38,17 +48,17 @@ class NavAndFooterVisibility {
 
   handleNavigationVisibility = () => {
     this.currentScrollPosition = window.pageYOffset;
-    this.previousScrollPosition - this.currentScrollPosition > 0 ? this.navigationHide() : this.navigationShow();
+    this.previousScrollPosition - this.currentScrollPosition > 0 ? this.navigationShow() : this.navigationHide();
     this.previousScrollPosition - this.currentScrollPosition < 0 ? this.handleCloseHamburgerMenu() : null;
     this.previousScrollPosition = this.currentScrollPosition;
   }
 
   navigationShow = () => {
-    this.dom.navigation.classList.remove(classNames.navShow);
+    this.navCanBeVisible ? this.dom.navigation.classList.add(classNames.navShow) : null;
   }
 
   navigationHide = () => {
-    this.dom.navigation.classList.add(classNames.navShow);
+    this.dom.navigation.classList.remove(classNames.navShow);
     this.handleCloseHamburgerMenu();
   }
 
@@ -66,4 +76,3 @@ class NavAndFooterVisibility {
 }
 
 export default NavAndFooterVisibility;
-
