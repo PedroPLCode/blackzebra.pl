@@ -3,6 +3,7 @@
 
 header {
   height: 100dvh;
+  width: 100dvw;
 
   .container {
 
@@ -79,6 +80,14 @@ header {
               color: $color-three;
               font-family: $font-two;
               text-align: center;
+
+              @media (max-width: $media-border-extra-small) {
+                font-size: 6dvw;
+              }
+
+              @media (min-width: $media-border) {
+                font-size: 3dvh;
+              }
             }
           }
         }
@@ -91,7 +100,7 @@ header {
 
       article {
         height: 106dvh;
-        width: 100dvw;
+        width: 85dvw;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -113,8 +122,8 @@ header {
         }
 
         a {
-          width: 43dvh;
-          height: 43dvh;
+          width: 85dvw;
+          height: calc((100dvh - 6dvh - 10dvh) / 2);
           background-color: $color-two;
           border-radius: $base-size * 3;
           display: flex;
@@ -124,11 +133,11 @@ header {
           text-decoration: none;
 
           @media (min-width: $media-border) {
-            width: 65dvh;
+            width: calc($base-width / 2);
             height: 65dvh;
           }
 
-          @media (orientation: landscape) {
+          @media (max-width: $media-border) and (orientation: landscape) {
             width: 75dvh;
             height: 75dvh;
           }
@@ -149,6 +158,10 @@ header {
             text-transform: uppercase;
             text-shadow: $neon-glow-three;
 
+            @media (max-height: $media-border-extra-small) and (orientation: landscape) {
+              font-size: clamp($base-size, 8dvw, $base-size * 3);
+            }
+
             &::-moz-selection {
               background-color: $color-three;
               color: $color-three;
@@ -167,8 +180,13 @@ header {
           img {
             height: 30dvh;
 
-            @media (min-width: $media-border) {
+            @media (max-height: $media-border-extra-small) and (orientation: landscape) {
               height: 45dvh;
+            }
+
+            @media (min-width: $media-border) {
+              max-height: calc($base-width / 2);
+              max-width: calc($base-width / 2);
             }
           }
         }
@@ -198,6 +216,10 @@ header {
     font-size: calc($base-size * 2.5);
     font-weight: bold;
     text-transform: uppercase;
+
+    @media (min-width: $media-border-extra-large) {
+      font-size: calc($base-size * 4);
+    }
 
     &::-moz-selection {
       background-color: $color-three;

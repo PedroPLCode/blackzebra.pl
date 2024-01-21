@@ -35,6 +35,10 @@
         text-transform: uppercase;
         text-shadow: $neon-glow-three;
 
+        @media (max-height: $media-border-extra-small) and (orientation: landscape) {
+          font-size: clamp($base-size, 6dvw, $base-size * 2);
+        }
+
         &::-moz-selection {
           background-color: $color-three;
           color: $color-three;
@@ -67,8 +71,9 @@
             width: auto;
           }
 
-          @media (orientation: landscape) {
+          @media (max-width: $media-border) and (orientation: landscape) {
             height: 30dvh;
+            width: auto;
           }
         }
       }
@@ -94,6 +99,15 @@
           justify-content: flex-start;
           align-items: center;
 
+          @media (max-width: $media-border) and (orientation: landscape) {
+            height: calc($base-size * 2);
+          }
+
+          @media (max-height: $media-border-extra-small) and (orientation: landscape) {
+            height: calc($base-size * .5);
+            margin: calc($base-size * .25);
+          }
+
           p {
             color: $color-one;
             font-family: $font-two;
@@ -101,6 +115,10 @@
             margin: 0;
             padding: 0;
             padding-left: calc($base-size * 2);
+
+            @media (max-width: $media-border-extra-small) {
+              font-size: 4dvw;
+            }
 
             @media (hover) {
               &:hover {

@@ -26,6 +26,7 @@
       }
 
       h3 {
+        z-index: 11;
         margin-top: calc($base-size * 3);
         color: $color-three;
         font-size: clamp($base-size, 6dvw, $base-size * 4);
@@ -33,6 +34,10 @@
         text-align: center;
         text-transform: uppercase;
         text-shadow: $neon-glow-three;
+
+        @media (max-height: $media-border) and (orientation: landscape) {
+          font-size: clamp($base-size, 6dvw, $base-size * 2);
+        }
 
         &::-moz-selection {
           background-color: $color-three;
@@ -59,6 +64,10 @@
           font-family: $font-two;
           text-shadow: $neon-glow-four;
 
+          @media (max-height: $media-border) and (orientation: landscape) {
+            font-size: clamp($base-size, 6dvw, $base-size * 2);
+          }
+
           &::-moz-selection {
             background-color: $color-three;
             color: $color-three;
@@ -80,6 +89,10 @@
           font-family: $font-three;
           text-shadow: $neon-glow-five;
           top: 30dvh;
+
+          @media (max-height: $media-border) and (orientation: landscape) {
+            font-size: clamp($base-size, 6dvw, $base-size * 2);
+          }
 
           &::-moz-selection {
             background-color: $color-four;
