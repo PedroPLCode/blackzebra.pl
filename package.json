@@ -28,6 +28,7 @@
   "license": "ISC",
   "dependencies": {
     "greensock": "^1.20.2",
+    "gsap": "^3.12.5",
     "gsap-promisify": "^1.0.2",
     "run-all": "^1.0.1"
   },
